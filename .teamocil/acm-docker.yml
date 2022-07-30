@@ -1,0 +1,19 @@
+windows:
+  - name: docker
+    root: /home/pc/workspace/
+    layout: even-horizontal
+    panes:
+      - commands:
+        - acm
+        - rvm use ruby-2.6.6
+        - docker-compose down
+        - docker-compose up -d
+        - docker attach $(docker-compose ps -q app)
+  - name: nvim
+    root: /home/pc/workspace/
+    layout: even-horizontal
+    panes:
+      - commands:
+        - acm
+        - rvm use ruby-2.6.6
+        - nvim

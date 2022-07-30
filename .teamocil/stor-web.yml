@@ -1,0 +1,21 @@
+windows:
+  - name: docker
+    root: /Users/lucas
+    layout: even-horizontal
+    panes:
+      - commands:
+        - web
+        - open -a Docker
+        - sleep 30
+        - docker-compose down
+        - docker-compose up -d
+      - commands:
+        - web
+        - rs
+  - name: nvim
+    root: /Users/lucas
+    layout: even-horizontal
+    panes:
+      - commands:
+        - web
+        - nvim

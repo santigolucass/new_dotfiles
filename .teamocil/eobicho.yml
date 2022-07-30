@@ -1,0 +1,20 @@
+windows:
+  - name: api_adm
+    root: /Users/lucas/workspace
+    layout: tiled
+    panes:
+      - commands:
+        - eobicho
+        - rs -e development -p 3000
+      - commands:
+        - postgres -D /usr/local/var/postgres
+      - commands:
+        - eobicho_adm
+        - rs -e development -p 3001
+  - name: nvim
+    root: /Users/lucas/workspace
+    layout: even-horizontal
+    panes:
+      - commands:
+        - eobicho
+        - nvim

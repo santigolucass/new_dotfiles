@@ -1,0 +1,21 @@
+windows:
+  - name: docker_sidekiq
+    root: /home/pc/deco/
+    layout: even-horizontal
+    panes:
+      - commands:
+        - cd phoenix-api
+        - docker-compose -f docker-compose-development.yml up
+      - commands:
+        - cd phoenix-api
+        - RAILS_ENV=local bundle exec sidekiq -c 4
+  - name: api_ui
+    root: /home/pc/deco/
+    layout: even-horizontal
+    panes:
+      - commands:
+        - cd phoenix-api
+        - rs -e local
+      - commands:
+        - cd phoenix-ui
+        - grunt local

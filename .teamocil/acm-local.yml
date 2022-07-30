@@ -1,0 +1,20 @@
+windows:
+  - name: docker
+    root: /home/pc/workspace/
+    layout: even-horizontal
+    panes:
+      - commands:
+        - acm
+        - docker-compose down
+        - docker-compose up -d mongodb
+        - rs
+      - commands:
+        - acm
+        - ./bin/webpack-dev-server
+  - name: nvim
+    root: /home/pc/workspace/
+    layout: even-horizontal
+    panes:
+      - commands:
+        - acm
+        - nvim
